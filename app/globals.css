@@ -6,7 +6,7 @@
 @custom-variant dawn (&:is([data-theme=dawn] *));
 
 @theme {
-  --color-base: oklch(0.2174 0.0262 290.92);
+  --color-cbase: oklch(0.2174 0.0262 290.92);
   --color-surface: oklch(0.2436 0.033264 289.0242);
   --color-overlay: oklch(0.2685 0.0423 289.34);
   --color-muted: oklch(0.537 0.0448 291.69);
@@ -22,7 +22,7 @@
   --color-hmed: oklch(0.371 0.0366 291.38);
   --color-high: oklch(0.4432 0.039 290.83);
 
-  --color-dawn-base: oklch(0.9665 0.0126 71.33);
+  --color-dawn-cbase: oklch(0.9665 0.0126 71.33);
   --color-dawn-surface: oklch(0.989 0.0091 76.61);
   --color-dawn-overlay: oklch(0.9381 0.0174 73.07);
   --color-dawn-muted: oklch(0.6721 0.0267 298.62);
@@ -47,7 +47,7 @@
     @apply border-2 p-3 m-2 mt-2.5 relative hover:border-(--accent) transition-colors sborder-hmed;
     --accent: var(--color-high);
     & > .window-title:first-child {
-      @apply absolute -top-2.5 px-1 text-sm sbg-base stext-hmed transition-colors;
+      @apply absolute -top-2.5 px-1 text-sm sbg-cbase stext-hmed transition-colors;
     }
     @variant focus-visible {
       & > .window-title:first-child {
@@ -214,6 +214,6 @@
     scrollbar-color: var(--color-iris) transparent;
   }
   body {
-    @apply sbg-base stext-text font-fira transition-colors;
+    @apply sbg-cbase stext-text font-fira transition-colors;
   }
 }
