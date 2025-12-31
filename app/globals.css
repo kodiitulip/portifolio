@@ -3,7 +3,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-/* @custom-variant moon (&:is(.moon *)); */
 @custom-variant dawn (&:is([data-theme=dawn] *));
 
 @theme {
@@ -80,6 +79,28 @@
     --theme-color: --value(--color-dawn- *);
     --theme-color: color-mix(in oklab, --value(--color-dawn- *) calc(--modifier(integer) * 1%), transparent);
     --theme-color: color-mix(in oklab, --value([color]) 90%, black);
+  }
+}
+
+@utility theme-data-color {
+  @apply theme-color-iris;
+  &:is([data-theme-color='love'] *) {
+    @apply theme-color-love;
+  }
+  &:is([data-theme-color='gold'] *) {
+    @apply theme-color-gold;
+  }
+  &:is([data-theme-color='rose'] *) {
+    @apply theme-color-rose;
+  }
+  &:is([data-theme-color='pine'] *) {
+    @apply theme-color-pine;
+  }
+  &:is([data-theme-color='foam'] *) {
+    @apply theme-color-foam;
+  }
+  &:is([data-theme-color='iris'] *) {
+    @apply theme-color-iris;
   }
 }
 

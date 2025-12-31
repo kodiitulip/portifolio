@@ -10,6 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 'sbg-overlay hover:stext-surface hover:bg-(--theme-color) focus-visible:bg-(--theme-color)',
+        inverted: 'bg-(--theme-color) focus-visible:sbg-overlay hover:sbg-overlay stext-surface hover:stext-text',
         ghost:
           'hover:bg-(--theme-color) focus-visible:bg-(--theme-color) hover:stext-overlay focus-visible:stext-overlay',
         link: 'underline-offset-4 hover:underline hover:text-(--theme-color) focus-visible:underline focus-visible:text-(--theme-color)'

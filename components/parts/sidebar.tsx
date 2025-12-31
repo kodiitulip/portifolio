@@ -3,6 +3,7 @@ import { DropdownMenuTrigger, DropdownMenu, DropdownMenuContent, DropdownMenuIte
 import { MenuIcon } from 'lucide-react';
 import { ButtonProps } from '../ui/button';
 import { ToggleThemeButton } from '../ui/toggle-theme-button';
+import { ChangeColorButton } from '../ui/change-color-button';
 
 const items = [
   {
@@ -36,12 +37,20 @@ const Sidebar = ({ ...props }: Omit<ButtonProps, 'onClick'>) => {
         {items.map(({ title, url }) => (
           <DropdownMenuItem
             key={title}
+            variant='default'
             asChild>
             <Link href={url}>{title}</Link>
           </DropdownMenuItem>
         ))}
         <DropdownMenuItem asChild>
           <ToggleThemeButton size='default'>Mudar tema</ToggleThemeButton>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <ChangeColorButton
+            variant='default'
+            size='default'>
+            Mudar Paleta
+          </ChangeColorButton>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
